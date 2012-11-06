@@ -12,18 +12,10 @@
     }
   ],
   "dependencies": {
-    "crypto": ">=0.8.14",
     "underscore": ">=1.4.2"
-  },
-  "devDependencies": {
-    "expresso": ">=0.9.2",
-    "vows": ">=0.6.2"
   },
   "engines": {
     "node": ">=0.4.0"
-  },
-  "scripts": {
-    "test": "expresso test/*"
   },
   "readme": "",
   "_id": "cmcic@0.0.1",
