@@ -1,0 +1,31 @@
+{
+  "name": "cmcic",
+  "description": "A module for cmcic payments",
+  "version": "0.0.1",
+  "author": "Thomas Florelli <thomas.florelli@epitech.eu>",
+  "homepage": "http://github.com/",
+  "main": "./lib/cmcic.js",
+  "contributors": [
+    {
+      "name": "La loutre masquée",
+      "email": "laloutremasquee@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "crypto": ">=0.8.14",
+    "underscore": ">=1.4.2"
+  },
+  "devDependencies": {
+    "expresso": ">=0.9.2",
+    "vows": ">=0.6.2"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "scripts": {
+    "test": "expresso test/*"
+  },
+  "readme": "",
+  "_id": "cmcic@0.0.1",
+  "_from": "i18n@0.0.x"
+}
