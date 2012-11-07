@@ -1,23 +1,23 @@
 {
-  "name": "cmcic",
-  "description": "A module for cmcic payments",
-  "version": "0.0.1",
-  "author": "Thomas Florelli <thomas.florelli@epitech.eu>",
-  "homepage": "http://github.com/",
-  "main": "./lib/cmcic.js",
-  "contributors": [
-    {
-      "name": "La loutre masquée",
-      "email": "laloutremasquee@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "underscore": ">=1.4.2"
-  },
-  "engines": {
-    "node": ">=0.4.0"
-  },
-  "readme": "",
-  "_id": "cmcic@0.0.1",
-  "_from": "i18n@0.0.x"
+	"name": "cmcic",
+	"description": "A module for cmcic payments",
+	"version": "0.0.1",
+	"author": "Thomas Florelli <thomas.florelli@epitech.eu>",
+	"homepage": "https://github.com/Florelli/cmcic",
+	"main": "./lib/cmcic.js",
+	"contributors": [
+		{"name": "Pierrick Paul", "email": "pierrick.paul@epitech.eu"}
+	],
+	"dependencies": {
+		"underscore": ">=1.4.2"
+	},
+	"engines": {
+		"node": ">=0.4.0"
+	},
+	"scripts": {
+    	"test": "node tests/init.js"
+	},
+	"readme": "",
+	"_id": "cmcic@0.0.1",
+	"_from": "i18n@0.0.x"
 }
