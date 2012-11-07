@@ -1,6 +1,6 @@
 {
 	"name": "cmcic",
-	"description": "A module for cmcic payments",
+	"description": "Payments module for CIC bank, Credit Mutuel and OBC Bank",
 	"version": "0.0.1",
 	"author": "Thomas Florelli <thomas.florelli@epitech.eu>",
 	"homepage": "https://github.com/Florelli/cmcic",
@@ -9,15 +9,12 @@
 		{"name": "Pierrick Paul", "email": "pierrick.paul@epitech.eu"}
 	],
 	"dependencies": {
-		"underscore": ">=1.4.2"
+		"underscore": "1.4.x"
 	},
 	"engines": {
-		"node": ">=0.4.0"
+		"node": "0.8.x"
 	},
 	"scripts": {
     	"test": "node tests/init.js"
-	},
-	"readme": "",
-	"_id": "cmcic@0.0.1",
-	"_from": "i18n@0.0.x"
+	}
 }

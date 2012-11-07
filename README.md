@@ -1,11 +1,11 @@
-=== How-to use ===
+=== How-to use
 
 ```JavaScript
 var cmcic = require('cmcic');
 
 var tpe = new cmcic.tpe({
-	CMCIC_TPE: 'tpeid', // 7
-	CMCIC_CODESOCIETE: 'societykey', // 20
+	CMCIC_TPE: 'tpeid',
+	CMCIC_CODESOCIETE: 'societykey',
 	CMCIC_CLE: '1234567890abcdef',
 	CMCIC_BANK: 'CIC',
 	CMCIC_LNG: 'FR',
