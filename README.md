@@ -1,4 +1,6 @@
-=== How-to use
+# CMCIC
+
+## How-to use
 
 ```JavaScript
 var cmcic = require('cmcic');
@@ -10,15 +12,15 @@ var tpe = new cmcic.tpe({
 	CMCIC_BANK: 'CIC',
 	CMCIC_LNG: 'FR',
 	CMCIC_CURRENCY: 'EUR',
-	CMCIC_URL_RETOUR: "/url/return",
-	CMCIC_URLOK: "/url/ok",
-	CMCIC_URLKO: "/url/ko"
+	CMCIC_URL_RETOUR: '/url/return',
+	CMCIC_URLOK: '/url/ok',
+	CMCIC_URLKO: '/url/ko'
 });
 
 var t = {
-	date: "12/12/12",
-	amount: "300EUR",
-	reference: "qwerty"
+	email: 'exemple@exemple.fr',
+	amount: 300,
+	reference: 'qwerty'
 };
 
 var trans = new cmcic.transaction(tpe, t);
