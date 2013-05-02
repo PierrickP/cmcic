@@ -1,5 +1,7 @@
 # CMCIC
 
+[![Build Status](https://travis-ci.org/PierrickP/cmcic.png?branch=master)](https://travis-ci.org/PierrickP/cmcic)
+
 ## How-to use
 
 ```JavaScript
@@ -30,3 +32,30 @@ var trans = new cmcic.transaction(tpe, t);
 res.send(trans.form('paimentid', true));
 
 ```
+
+On your return url (still with expressjs)
+
+```JavaScript
+var ret = tpe.checkTransactionReturn((req.method == 'POST')? req.body : req.query);
+if (ret.status) {
+	console.error('Payment is ok');
+	res.send(tpe.RETURN_OK);
+} else {
+	console.error('Payment is fail : ', ret.motifrefus );
+	res.send(tpe.RETURN_NOTOK);
+}
+```
+
+# Tips
+
+For handle different kind of payment with the same TPE, you can use the 'texte-libre' field !
+You can use 'texte-libre' field like an object, it ll be *stringified*/*parsed* for you.
+
+# Coding Style
+
+* tabulation (4 width)
+* JsHint
+
+# License
+
+Under [MIT license](LICENSE.md), feel free to contribuate with fork and PR !
