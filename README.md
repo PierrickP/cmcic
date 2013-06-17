@@ -1,6 +1,8 @@
 # CMCIC
 
 [![Build Status](https://travis-ci.org/PierrickP/cmcic.png?branch=master)](https://travis-ci.org/PierrickP/cmcic)
+[![Dependency Status](https://david-dm.org/PierrickP/cmcic.png)](https://david-dm.org/PierrickP/cmcic)
+[![NPM version](https://badge.fury.io/js/cmcic.png)](http://badge.fury.io/js/cmcic)
 
 ## How-to use
 
