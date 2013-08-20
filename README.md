@@ -1,6 +1,10 @@
 # CMCIC
 
 [![Build Status](https://travis-ci.org/PierrickP/cmcic.png?branch=master)](https://travis-ci.org/PierrickP/cmcic)
+[![Dependency Status](https://david-dm.org/PierrickP/cmcic.png)](https://david-dm.org/PierrickP/cmcic)
+[![NPM version](https://badge.fury.io/js/cmcic.png)](http://badge.fury.io/js/cmcic)
+
+[![NPM](https://nodei.co/npm/cmcic.png?downloads=true&stars=true)](https://npmjs.org/package/cmcic)
 
 ## How-to use
 
@@ -55,6 +59,11 @@ You can use 'texte-libre' field like an object, it ll be *stringified*/*parsed* 
 
 * tabulation (4 width)
 * JsHint
+
+
+# TODO
+
+https://github.com/PierrickP/cmcic/issues?labels=new-feature&page=1&state=open 
 
 # License
 
