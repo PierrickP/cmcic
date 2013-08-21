@@ -3,19 +3,20 @@ should = require('should');
 
 describe('bank validation', function () {
 
+	var tpe = new cmcic.tpe({
+		CMCIC_TPE: '1234567',
+		CMCIC_CODESOCIETE: 'societykey',
+		CMCIC_CLE: '1234567890abcdef',
+		CMCIC_BANK: 'CIC',
+		CMCIC_VERSION: '3.0',
+		CMCIC_LNG: 'FR',
+		CMCIC_CURRENCY: 'EUR',
+		CMCIC_URL_RETOUR: '/url/return',
+		CMCIC_URLOK: '/url/ok',
+		CMCIC_URLKO: '/url/ko'
+	});
+
 	describe('checkTransactionReturn', function () {
-		var tpe = new cmcic.tpe({
-			CMCIC_TPE: '1234567',
-			CMCIC_CODESOCIETE: 'societykey',
-			CMCIC_CLE: '1234567890abcdef',
-			CMCIC_BANK: 'CIC',
-			CMCIC_VERSION: '3.0',
-			CMCIC_LNG: 'FR',
-			CMCIC_CURRENCY: 'EUR',
-			CMCIC_URL_RETOUR: '/url/return',
-			CMCIC_URLOK: '/url/ok',
-			CMCIC_URLKO: '/url/ko'
-		});
 		var trans = new cmcic.transaction(tpe, {
 			email: 'exemple@exemple.fr',
 			amount: 30,
@@ -56,6 +57,16 @@ describe('bank validation', function () {
 
 		it('texte-libre should be JSON parsed', function () {
 			JSON.stringify(ctr['texte-libre']).should.equal('{"plop":42}');
+		});
+	});
+
+	describe('Code return', function () {
+		it('RETURN_OK should be right', function () {
+			tpe.RETURN_OK.should.equal('version=2\ncdr=0');
+		});
+
+		it('RETURN_NOTOK should be right', function () {
+			tpe.RETURN_NOTOK.should.equal('version=2\ncdr=1');
 		});
 	});
 });
