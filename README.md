@@ -1,6 +1,7 @@
 # CMCIC
 
 [![Build Status](https://travis-ci.org/PierrickP/cmcic.png?branch=master)](https://travis-ci.org/PierrickP/cmcic)
+[![Coverage Status](https://coveralls.io/repos/PierrickP/cmcic/badge.png)](https://coveralls.io/r/PierrickP/cmcic)
 [![Dependency Status](https://david-dm.org/PierrickP/cmcic.png)](https://david-dm.org/PierrickP/cmcic)
 [![NPM version](https://badge.fury.io/js/cmcic.png)](http://badge.fury.io/js/cmcic)
 
@@ -63,7 +64,7 @@ You can use 'texte-libre' field like an object, it ll be *stringified*/*parsed* 
 
 # TODO
 
-https://github.com/PierrickP/cmcic/issues?labels=new-feature&page=1&state=open 
+https://github.com/PierrickP/cmcic/issues?labels=new-feature&page=1&state=open
 
 # License
 
