@@ -1,7 +1,7 @@
 {
 	"name": "cmcic",
 	"description": "Payments module for CIC bank, Credit Mutuel and OBC Bank",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"author": "Pierrick Paul <pierrick.paul@epitech.eu>",
 	"homepage": "https://github.com/PierrickP/cmcic",
 	"main": "./lib/cmcic.js",
