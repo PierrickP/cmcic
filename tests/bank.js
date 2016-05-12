@@ -49,24 +49,62 @@ describe('bank validation', function () {
 			pares: ''
 		};
 
-		var ctr = tpe.checkTransactionReturn(bankData);
+		describe('Transaction goes well', function () {
+			var ctr;
 
-		it('Transaction MAC return should be right', function () {
-			ctr.status.should.ok;
+			before(function () {
+				ctr = tpe.checkTransactionReturn(bankData);
+			});
+
+			it('Seal returned should be validated', function () {
+				ctr.isSealValidated.should.be.true;
+			});
+
+			it('Transaction payment status return should be right', function () {
+				ctr.status.should.ok;
+			});
+
+			it('texte-libre should be JSON parsed', function () {
+				JSON.stringify(ctr['texte-libre']).should.equal('{"plop":42}');
+			});
 		});
 
-		it('texte-libre should be JSON parsed', function () {
-			JSON.stringify(ctr['texte-libre']).should.equal('{"plop":42}');
+		describe('Transaction gets cancelled', function () {
+			var ctr;
+
+			before(function () {
+				var failingData = bankData;
+				failingData['code-retour'] = 'Annulation';
+				ctr = tpe.checkTransactionReturn(failingData);
+			});
+
+			it('Transaction payment status return should be wrong', function () {
+				ctr.status.should.be.false;
+			});
+		});
+
+		describe('MAC returned is not valid', function () {
+			var ctr;
+
+			before(function () {
+				var failingData = bankData;
+				failingData.MAC = 'malicious';
+				ctr = tpe.checkTransactionReturn(failingData);
+			});
+
+			it('Seal returned should not be validated', function () {
+				ctr.isSealValidated.should.be.false;
+			});
 		});
 	});
 
 	describe('Code return', function () {
 		it('RETURN_OK should be right', function () {
-			tpe.RETURN_OK.should.equal('version=2\ncdr=0');
+			tpe.RETURN_OK.should.equal('version=2\ncdr=0\n');
 		});
 
 		it('RETURN_NOTOK should be right', function () {
-			tpe.RETURN_NOTOK.should.equal('version=2\ncdr=1');
+			tpe.RETURN_NOTOK.should.equal('version=2\ncdr=1\n');
 		});
 	});
 });

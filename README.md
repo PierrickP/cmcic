@@ -42,12 +42,18 @@ On your return url (still with expressjs)
 
 ```JavaScript
 var ret = tpe.checkTransactionReturn((req.method == 'POST')? req.body : req.query);
+
+if (!ret.isSealValidated) {
+	console.log('MAC seal is invalid')
+	return res.send(tpe.RETURN_NOTOK);
+}
+
 if (ret.status) {
 	console.error('Payment is ok');
 	res.send(tpe.RETURN_OK);
 } else {
 	console.error('Payment is fail : ', ret.motifrefus );
-	res.send(tpe.RETURN_NOTOK);
+	res.send(tpe.RETURN_OK);
 }
 ```
 
