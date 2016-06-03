@@ -57,6 +57,10 @@ if (ret.status) {
 }
 ```
 
+# Official documentation
+
+[https://www.monetico-paiement.fr/fr/info/documentations/Monetico_Paiement_documentation_technique_v1_0c.pdf](https://www.monetico-paiement.fr/fr/info/documentations/Monetico_Paiement_documentation_technique_v1_0c.pdf)
+
 # Tips
 
 For handle different kind of payment with the same TPE, you can use the 'texte-libre' field !
