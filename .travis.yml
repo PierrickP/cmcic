@@ -1,3 +1,19 @@
 language: node_js
-node_js: 0.8
+
 script: "npm test"
+
+node_js:
+  - "4"
+
+notifications:
+  email: false
+
+deploy:
+  - provider: npm
+    email: "mulotmail@gmail.com"
+    api_key:
+      secure: FPj38o+Rvpk/f/0MUNLSYztg4rfOAWJqtpFeAL5Ebp7DZqFGRRzK+EzEq3knecoRyV9zqMw52LY1bZgvXv8zLN8Htfq5836sftltUWTYdDgeMkUq5yDz4XO1gCeNdb+n0byf2CE7dk1KKYzUIOmd+ZGqM3dCcrgooh3hj+1SoCpXReXVa4iVPUNBra0dGBfQH5esB8OlUe6NhOJ9b7fDS3nfTEvT2tiNR8iLM6qvKhwWIv2udXh5W8JMVJx4BJm5Wp0rr+wjSSeutPSGITF4pfz6b0/YlE5DvfOJU7oGxKB58yXLfNb1XDW9zy5/0nr9aH/OYxVn3lKKmkZ+7KQxIaZamJVfn1mTDM4XBjhnzMWcrmcIoogtK9GMjQjmdHqAo+/tNHfEvdtfCAEvM+r6unauEsRtvIYLXg3cqv1oDY0W2rcyWu9cNW+caUbcJqlY5xJF21saEj7kS25T77yUcvvQ6QCW7xmyFd5cy7BYPl5F3os+yj+yrPslt+90cr2RaeX0GG7mi1OroyWa2xHfbRcADYTslHuYqdOt8V70o9D2M1Q9gvM8szRcfds0Rrw4rG05I3/AnjZIS49jYYhDyoBN5RGO9NBc4jV5t/+VvY0koClFcX/7evUVvhkrddFero3V38i55RIk8TgPzpddoxXKc7wLMb/t6g3rqJ/j/J4=
+    skip_cleanup: true
+    on:
+      branch: master
+      node: "4"
