@@ -1,33 +1,42 @@
 {
 	"name": "cmcic",
-	"description": "Payments module for CIC bank, Credit Mutuel and OBC Bank",
-	"version": "0.2.2",
-	"author": "Pierrick Paul <pierrick.paul@epitech.eu>",
+	"description": "Payments module for Monetico Paiement (ex CM‑CIC Paiement)",
+	"version": "0.3.0",
+	"author": "Pierrick Paul <mulotmail@gmail.com>",
 	"homepage": "https://github.com/PierrickP/cmcic",
 	"main": "./lib/cmcic.js",
 	"contributors": [
-		{"name": "Thomas Florelli", "email": "thomas.florelli@epitech.eu"}
+		{
+			"name": "Thomas Florelli",
+			"email": "thomas.florelli@epitech.eu"
+		},
+		{
+			"name": "Guillaume Flandre",
+			"email": "guillaume@labelleassiette.com"
+		}
 	],
 	"dependencies": {
-		"underscore": "1.5.x"
+		"underscore": "^1.8.3"
 	},
 	"devDependencies": {
-		"coveralls": "2.2.x",
-		"mocha": "1.12.x",
-		"mocha-lcov-reporter": "0.0.x",
-		"should": "1.2.x",
-		"istanbul": "0.1.x"
+		"coveralls": "^2.11.9",
+		"istanbul": "^0.4.3",
+		"mocha": "^2.5.3",
+		"mocha-lcov-reporter": "^1.2.0",
+		"should": "^9.0.0"
 	},
 	"engines": {
 		"node": "0.8.x"
 	},
 	"scripts": {
-		"test": "istanbul cover node_modules/mocha/bin/_mocha tests/runner.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+		"test": "istanbul cover _mocha tests/runner.js && if [ \"$CONTINUOUS_INTEGRATION\" = \"true\" ]; then cat ./coverage/lcov.info | ./node_modules/.bin/coveralls; fi"
 	},
 	"license": "MIT",
 	"keywords": [
 		"cmcic",
 		"banque",
-		"payement"
+		"payement",
+		"Monetico Paiement"
+		"es5"
 	]
 }
