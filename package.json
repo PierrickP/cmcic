@@ -1,42 +1,41 @@
 {
-	"name": "cmcic",
-	"description": "Payments module for Monetico Paiement (ex CM‑CIC Paiement)",
-	"version": "0.3.0",
-	"author": "Pierrick Paul <mulotmail@gmail.com>",
-	"homepage": "https://github.com/PierrickP/cmcic",
-	"main": "./lib/cmcic.js",
-	"contributors": [
-		{
-			"name": "Thomas Florelli",
-			"email": "thomas.florelli@epitech.eu"
-		},
-		{
-			"name": "Guillaume Flandre",
-			"email": "guillaume@labelleassiette.com"
-		}
-	],
-	"dependencies": {
-		"underscore": "^1.8.3"
-	},
-	"devDependencies": {
-		"coveralls": "^2.11.9",
-		"istanbul": "^0.4.3",
-		"mocha": "^2.5.3",
-		"mocha-lcov-reporter": "^1.2.0",
-		"should": "^9.0.0"
-	},
-	"engines": {
-		"node": "0.8.x"
-	},
-	"scripts": {
-		"test": "istanbul cover _mocha tests/runner.js && if [ \"$CONTINUOUS_INTEGRATION\" = \"true\" ]; then cat ./coverage/lcov.info | ./node_modules/.bin/coveralls; fi"
-	},
-	"license": "MIT",
-	"keywords": [
-		"cmcic",
-		"banque",
-		"payement",
-		"Monetico Paiement"
-		"es5"
-	]
+  "name": "cmcic",
+  "description": "Payments module for Monetico Paiement (ex CM‑CIC Paiement)",
+  "version": "0.3.0",
+  "author": "Pierrick Paul <mulotmail@gmail.com>",
+  "homepage": "https://github.com/PierrickP/cmcic",
+  "main": "./lib/cmcic.js",
+  "contributors": [
+    {
+      "name": "Thomas Florelli",
+      "email": "thomas.florelli@epitech.eu"
+    },
+    {
+      "name": "Guillaume Flandre",
+      "email": "guillaume@labelleassiette.com"
+    }
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3",
+    "should": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha tests/runner.js && if [ \"$CONTINUOUS_INTEGRATION\" = \"true\" ]; then cat ./coverage/lcov.info | ./node_modules/.bin/coveralls; fi"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cmcic",
+    "banque",
+    "payement",
+    "Monetico Paiement",
+    "es5"
+  ]
 }

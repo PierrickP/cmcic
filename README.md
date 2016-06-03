@@ -13,21 +13,21 @@
 var cmcic = require('cmcic');
 
 var tpe = new cmcic.tpe({
-	CMCIC_TPE: 'tpeid',
-	CMCIC_CODESOCIETE: 'societykey',
-	CMCIC_CLE: '1234567890abcdef',
-	CMCIC_BANK: 'CIC',
-	CMCIC_LNG: 'FR',
-	CMCIC_CURRENCY: 'EUR',
-	CMCIC_URL_RETOUR: '/url/return',
-	CMCIC_URLOK: '/url/ok',
-	CMCIC_URLKO: '/url/ko'
+  CMCIC_TPE: 'tpeid',
+  CMCIC_CODESOCIETE: 'societykey',
+  CMCIC_CLE: '1234567890abcdef',
+  CMCIC_BANK: 'CIC',
+  CMCIC_LNG: 'FR',
+  CMCIC_CURRENCY: 'EUR',
+  CMCIC_URL_RETOUR: '/url/return',
+  CMCIC_URLOK: '/url/ok',
+  CMCIC_URLKO: '/url/ko'
 });
 
 var t = {
-	email: 'exemple@exemple.fr',
-	amount: 300,
-	reference: 'qwerty'
+  email: 'exemple@exemple.fr',
+  amount: 300,
+  reference: 'qwerty'
 };
 
 var trans = new cmcic.transaction(tpe, t);
@@ -44,16 +44,16 @@ On your return url (still with expressjs)
 var ret = tpe.checkTransactionReturn((req.method == 'POST')? req.body : req.query);
 
 if (!ret.isSealValidated) {
-	console.log('MAC seal is invalid')
-	return res.send(tpe.RETURN_NOTOK);
+  console.log('MAC seal is invalid')
+  return res.send(tpe.RETURN_NOTOK);
 }
 
 if (ret.status) {
-	console.error('Payment is ok');
-	res.send(tpe.RETURN_OK);
+  console.error('Payment is ok');
+  res.send(tpe.RETURN_OK);
 } else {
-	console.error('Payment is fail : ', ret.motifrefus );
-	res.send(tpe.RETURN_OK);
+  console.error('Payment is fail : ', ret.motifrefus );
+  res.send(tpe.RETURN_OK);
 }
 ```
 
