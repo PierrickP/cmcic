@@ -1,3 +1,19 @@
 language: node_js
-node_js: 0.8
+
 script: "npm test"
+
+node_js:
+  - "4"
+
+notifications:
+  email: false
+
+deploy:
+  - provider: npm
+    email: "mulotmail@gmail.com"
+    api_key:
+      secure: Ir7KZZd1mVutENUoqBWm+EeMOA3Y/M1Gp08BlOElEDzKz3p3eRF7MMuA7KpgVLYB4X1nEDGb6Qp+4+3dojcFPP03VxULyBjOSa9UmsQLprELQCAeSBTvcVk+lLixj3XHo2bMmiT9bSGWuae+3ouzHRaPNU3AZidG5IB840TY3zw=
+    skip_cleanup: true
+    on:
+      branch: master
+      node: "4"
