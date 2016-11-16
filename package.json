@@ -1,7 +1,7 @@
 {
   "name": "cmcic",
   "description": "Payments module for Monetico Paiement (ex CM‑CIC Paiement)",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "author": "Pierrick Paul <mulotmail@gmail.com>",
   "homepage": "https://github.com/PierrickP/cmcic",
   "main": "./lib/cmcic.js",
